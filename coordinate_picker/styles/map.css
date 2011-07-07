@@ -1,13 +1,17 @@
+/* @group Corrdinate Selector with Google Map */
+
 * {
 	margin: 0;
 	padding: 0;
 }
+
 #wrapper {
 	font-family: helvetica;
 	width: 672px; height: 472px;
 	padding: 14px;
 	background-color: #E5E5E7;
 }
+
 #map_canvas {
 	width: 672px;
 	height: 400px;
@@ -77,6 +81,7 @@ input.label {
 	margin-left: 81px;
 	z-index: 1;
 }
+
 p.field_tip {
 	color: #888;
 	font-size: 11px;
@@ -84,3 +89,72 @@ p.field_tip {
 	top: 58px;
 	padding-left: 10px;
 }
+
+/* @end */
+
+
+/*
+<div class="modal-overlay"></div>
+<div class="modal-window">
+	<iframe></iframe>
+	<a class="close-window"></a>
+</div>
+*/
+
+/* @group Modal Box */
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: 101;
+}
+
+.modal-window {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	padding: 0;
+	z-index: 102;
+	-moz-box-shadow:0 0 90px 5px #000;
+	-webkit-box-shadow: 0 0 90px #000;
+}
+
+/* @end */
+
+/* @group Modal Box IE6 */
+
+html.ie6 body {
+	height: 100%;
+}
+
+html.ie6 .modal-overlay {
+	position: absolute;
+	height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+html.ie6 iframe.modal-overlay {
+	background: none;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	z-index: 100;
+}
+
+html.ie6 .modal-window {
+	position: absolute;
+	top: expression(document.documentElement.scrollTop + (document.documentElement.clientHeight / 2) + 'px');
+}
+
+html.ie6 .close-window {
+	background-image: url();
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=close-button.png,sizingMethod=crop);
+}
+
+/* @end */
