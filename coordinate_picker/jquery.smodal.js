@@ -29,7 +29,8 @@
 			return $(sender).attr('href');
 		},
 		fadeInSpeed: 0,
-		fadeOutSpeed: 0
+		fadeOutSpeed: 0,
+		onLoad: false
 	}
 
 	/**********************************
@@ -151,5 +152,6 @@
 	$.fn.smodal = function (options) {
 		return _modal(this, options);
 	}
+
 
 })(jQuery);

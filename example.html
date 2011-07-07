@@ -16,32 +16,16 @@
 
 		
 	<title>page</title>
-	<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.4.2.min.js">
-		
-	</script>
-	<script src="coordinate_selector.js" type="text/javascript" charset="utf-8"></script>
-
-	<link rel="stylesheet" href="modalbox-styles/shadow.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	<script src="coordinate_picker/jquery.coordinate_selector.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="coordinate_picker/styles/smodal/shadow.css" type="text/css" media="screen" title="no title" charset="utf-8" />
 
 	<script type="text/javascript" charset="utf-8">
 		jQuery(function($) {
-			// $('script').each(function() {
-			// 	//alert($(this).attr('src'));
-			// });
-
 			$('#coordinate_picker').coord_selector({
 				onComplete: function(data) {
 				}
 			});
-			// $.smodal({src: 'map.html', width:700, height:500, onLoad: function() {
-			// 	console.log($('#coord_selector_iframe').contents());
-			// }}).open();
-			// $('#coordinate_picker').click(function(e) {
-			// 	e.preventDefault();
-			// 	//var modal = $(this).smodal({width:700, height:500}).open();
-			// 	// alert($('#coord_selector_iframe').contents().html());
-			// });
-
 		});
 	</script>
 </head>
