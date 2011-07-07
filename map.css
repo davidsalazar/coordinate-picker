@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+#wrapper {
+	font-family: helvetica;
+	width: 672px; height: 472px;
+	padding: 14px;
+	background-color: #E5E5E7;
+}
+#map_canvas {
+	width: 672px;
+	height: 400px;
+}
+
+#search_map {
+	border: 0;
+	background: url('background_search.png') 0 0 no-repeat;
+	width: 348px;
+	height: 17px;
+	font-size: 15px;
+	line-height: 17px;
+	color: #aaa;
+	font-family: helvetica;
+	padding: 10px 10px 6px;
+	font-weight: bold;
+	float: left;
+}
+
+input.label {
+	color: #ddd !important;
+}
+
+#search_map_form {
+	display: block;
+	padding-top: 18px;
+	position: relative;
+}
+
+#search_address_button {
+	display: block;
+	float: left;
+	margin: 2px 15px 0;
+	background: url('button_go.png') 0 0 no-repeat;
+	width: 99px;
+	height: 29px;
+	text-indent: -99999999px;
+	
+}
+
+#select_coords_button {
+	display: block;
+	float: left;
+	position: relative;
+	margin-top: -16px;
+	background: url('button_select.png') 0 0 no-repeat;
+	width: 175px;
+	height: 64px;
+	text-indent: -99999999px;
+	z-index: 2;
+	
+}
+
+#on_coords {
+	position: absolute;
+	background-color: #42ABDD;
+	width: 101px;
+	font-family: helvetica;
+	color: #fff;
+	font-weight: bold;
+	font-size: 10px;
+	text-align: center;
+	height: 18px;
+	line-height: 18px;
+	left: 453px;
+	top: 49px;
+	margin-left: 81px;
+	z-index: 1;
+}
+p.field_tip {
+	color: #888;
+	font-size: 11px;
+	position: absolute;
+	top: 58px;
+	padding-left: 10px;
+}

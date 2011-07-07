@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+	<title>Google Map Coordinates Selector</title>
+	<link rel="stylesheet" href="map.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	
+	<script type="text/javascript" charset="utf-8">
+
+		jQuery(function($) {
+			
+		});
+		
+	</script>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<div id="map_canvas"></div>
+		<form id="search_map_form">
+			<input type="text" name="search_map" value="" title="Search Address, City, State, or Zipcode" id="search_map" />
+			<input style="display: none;" type="submit" name="search_address_submit" value="Search" id="search_address_submit" />
+			<input type="hidden" name="long" value="" id="long" />
+			<input type="hidden" name="lat" value="" id="lat" />
+			<a href="javascript:;" id="search_address_button">Search Address</a>
+			<a href="javascript:;" id="select_coords_button">Set Coordinates</a>
+			<p class="field_tip">Search by address or drag the push-pin to the desired coordinates.</p>
+			<p id="on_coords"><span id="on_lat"></span>, <span id="on_long"></span></p>
+		</form>
+	</div>
+
+</body>
+</html>
