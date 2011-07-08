@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<style type="text/css" media="screen">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			padding: 20px;
+			font-family: helvetica;
+			background-color: #eee;
+			color: #666;
+		}
+		label {
+			display: block;
+			line-height: 1.5;
+			font-weight: bold;
+		}
+		h1 {
+			padding-bottom: 10px;
+		}
+		h2 {
+			color: #5E9AD2;
+		}
+		p {
+			font-size: 12px;
+			line-height: 1.5;
+			padding-bottom: 10px;
+		}
+		#sample_form_wrapper {
+			padding: 20px 0;
+		}
+		a:link, a:visited {
+			color: #6D8BCD;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	</style>
+		
+	<title>jQuery Coordinate Picker - Sample 2</title>
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="coordinate_picker/jquery.coordinate_picker.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="coordinate_picker/styles/smodal/shadow.css" type="text/css" media="screen" charset="utf-8" />
+
+	<script type="text/javascript" charset="utf-8">
+		jQuery(function($) {
+			$('#coordinate_picker').coordinate_picker({
+				onComplete: function(data) {
+					// Argument will contain an object with the 2 properties (lat, long) in decimal format.
+					// data = {lat: 00.00000000000000, long: 00.00000000000000}
+					$('#coords_selected').html(data.lat + ' Lat, ' + data.long + ' Long' )
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<h1>jQuery Coordinate Picker - Sample 2</h1>
+	<p>This sample uses the callback method to work with the coordinates selected.</p>
+
+	<div id="sample_form_wrapper">
+	<form method="post">
+
+		<p><a href="" id="coordinate_picker"><img src="coordinate_picker/styles/button_select.png" width="175" height="64" alt="Button Select" /></a></p>
+		
+		<h2>Coordinates Selected: <span id="coords_selected">-</span></h2>
+				
+	</form>
+	</div>
+
+</body>
+</html>

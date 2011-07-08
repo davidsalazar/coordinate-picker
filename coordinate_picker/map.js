@@ -13,13 +13,14 @@ var Map;
 				onComplete: false
 			};
 			
-			if (window.parent.$.coord_selector && window.parent.$.coord_selector.settings)
+			if (window.parent.$.coordinate_picker && window.parent.$.coordinate_picker.settings)
 			{
-				$.extend(settings, window.parent.$.coord_selector.settings);
+				$.extend(settings, window.parent.$.coordinate_picker.settings);
 			}
 			
-			var zoom = 8;
-			var coord_lat = 29.399519677124808, coord_long = -98.50343423461912;
+			var zoom = 3;
+			// Center of US Coords
+			var coord_lat = 40.96174791270287, coord_long = -95.25148110961912;
 			if (google.maps.ClientLocation)
 			{
 				zoom = 12;
@@ -45,6 +46,7 @@ var Map;
 			Map.add_marker(latlng);
 			Map.update();
 
+			$('#search_map').focus();
 			$('#search_map').input_hint();
 
 			$('#search_address_button').click(function() {
@@ -157,3 +159,7 @@ var Map;
 	
 	
 })(jQuery);
+
+jQuery(function($) {
+	Map.init();
+});

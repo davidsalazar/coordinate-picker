@@ -39,12 +39,12 @@
 
 	};
 	
-	var js_path = $.findJsPath('jquery.coordinate_selector.js');
+	var js_path = $.findJsPath('jquery.coordinate_picker.js');
 
 	$.get(js_path + 'jquery.smodal.js');
 	
-	$.coord_selector = {settings: {}};
-	$.fn.coord_selector = function(options) {  
+	$.coordinate_picker = {settings: {}};
+	$.fn.coordinate_picker = function(options) {  
 
 		var settings = {
 			lat_selector: '#lat',
@@ -57,7 +57,7 @@
 			$.extend(settings, options);
 		}
 		
-		$.coord_selector.settings = settings;
+		$.coordinate_picker.settings = settings;
 		return this.each(function() {
 
 			var $this = $(this);
