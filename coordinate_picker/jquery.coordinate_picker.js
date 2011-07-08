@@ -1,6 +1,6 @@
 
-(function($) {
-
+jQuery(function($) {
+	
 	$.findJsPath = function(js) {
 
 		var relative_js = false;
@@ -11,7 +11,7 @@
 			$('script').each(function() {
 				var $this = $(this);
 				var src = $this.attr('src');
-				if (src && src.substr(-js.length) == js)
+				if (src && src.substring(src.length - js.length) == js)
 				{
 					relative_js = src;
 					return true; 
@@ -24,7 +24,7 @@
 		{
 			relative_js = $('script').attr('src');	
 		}
-		
+	
 		var js_path = '';
 		if (relative_js)
 		{
@@ -38,7 +38,7 @@
 		return js_path ? js_path + '/' : '';
 
 	};
-	
+
 	var js_path = $.findJsPath('jquery.coordinate_picker.js');
 
 	$.get(js_path + 'jquery.smodal.js');
@@ -75,5 +75,5 @@
 	
 
 	
-})(jQuery);
+});
 
