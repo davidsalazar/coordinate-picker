@@ -5,6 +5,20 @@
 	padding: 0;
 }
 
+/* slightly enhanced, universal clearfix hack */
+
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+.clearfix { display: inline-block; }
+
+/* start commented backslash hack \*/
+
+* html .clearfix { height: 1%; }
+
+.clearfix { display: block; }
+
+/* close commented backslash hack */
+
 img { border: 0; }
 
 #wrapper {
@@ -41,6 +55,7 @@ input.label {
 	display: block;
 	padding-top: 18px;
 	position: relative;
+	height: 60px;
 }
 
 #search_address_button {
@@ -89,7 +104,9 @@ p.field_tip {
 	font-size: 11px;
 	position: absolute;
 	top: 58px;
+	left: 0;
 	padding-left: 10px;
 }
+
 
 /* @end */

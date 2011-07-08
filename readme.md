@@ -40,9 +40,13 @@ Installation
 Release Notes
 ===============================================
 Version 0.5 - July 8 2011
-Initial Release
+*Initial Release
+
+Version 0.51 - July 8 2011
+* Add ie specific styles to modal box because it doesn't support shadowbox css attributes.
 
 TODO
 ===============================================
+* Figure out how find path of plugin without loading them after the dom is ready.
 * Add HTML5 Geolocation API
 * Add Microsite with demo links

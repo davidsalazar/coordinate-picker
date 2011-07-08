@@ -30,11 +30,16 @@
 	z-index: 102;
 	-moz-box-shadow:0 0 90px 5px #000;
 	-webkit-box-shadow: 0 0 90px #000;
+	box-shadow: 0 0 90px #000;
 }
 
 /* @end */
 
-/* @group Modal Box IE6 */
+/* @group Modal Box IE */
+
+html.ie6 .modal-window, html.ie7 .modal-window, html.ie8 .modal-window {
+	border: 4px solid #666;
+}
 
 html.ie6 body {
 	height: 100%;
