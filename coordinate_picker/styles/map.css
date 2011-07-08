@@ -5,6 +5,8 @@
 	padding: 0;
 }
 
+img { border: 0; }
+
 #wrapper {
 	font-family: helvetica;
 	width: 672px; height: 472px;
