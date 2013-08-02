@@ -65,7 +65,7 @@ input.label {
 	background: url('button_go.png') 0 0 no-repeat;
 	width: 99px;
 	height: 29px;
-	text-indent: -99999999px;
+	text-indent: -999999px;
 	
 }
 
@@ -77,7 +77,7 @@ input.label {
 	background: url('button_select.png') 0 0 no-repeat;
 	width: 175px;
 	height: 64px;
-	text-indent: -99999999px;
+	text-indent: -999999px;
 	z-index: 2;
 	
 }
