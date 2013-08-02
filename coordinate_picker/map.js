@@ -10,7 +10,8 @@ var Map;
 			var settings = {
 				lat_selector: '#lat',
 				long_selector: '#long',
-				onComplete: false
+				onComplete: false,
+				starting_query: null
 			};
 			
 			if (window.parent.$.coordinate_picker && window.parent.$.coordinate_picker.settings)
@@ -106,6 +107,12 @@ var Map;
 					window.self.close();
 				}
 			});
+
+			if (settings.starting_query)
+			{
+				$('#search_map').val(settings.starting_query);
+				$('#search_map_form').submit();
+			}
 
 		},
 

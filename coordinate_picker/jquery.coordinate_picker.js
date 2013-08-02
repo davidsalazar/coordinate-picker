@@ -49,7 +49,8 @@ jQuery(function($) {
 		var settings = {
 			lat_selector: '#lat',
 			long_selector: '#long',
-			onComplete: false
+			onComplete: false,
+			starting_query: null
 		};
 
 		if (options)

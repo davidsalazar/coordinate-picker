@@ -24,7 +24,11 @@ var settings = {
 	// data = {lat: 00.00000000000000, long: 00.00000000000000}
 	onComplete: function(data) {
 		
-	}
+	},
+
+	// Optional starting query for map.
+	starting_query: '78247' // address or zip code
+
 
 };
 
